@@ -6,23 +6,25 @@ import './rxjs-operators';
 import { Tweet } from './tweet';
 import { User } from './user';
 
+var MYTWITTERSERVICE='http://twit-ang2-type-node.herokuapp.com/';
+
 @Injectable()
 export class TwitterService {
   constructor (private http: Http) {}
 
   getTweetsNASA(): Observable<Tweet[]> {
-    return this.http.get('app/tweetsNASA')
+    return this.http.get(MYTWITTERSERVICE + 'app/tweetsNASA')
                     .map(this.extractTweetData)
                     .catch(this.handleError);
   }
   getTweetsLADYGAGA(): Observable<Tweet[]> {
-    return this.http.get('app/tweetsLADYGAGA')
+    return this.http.get(MYTWITTERSERVICE + 'app/tweetsLADYGAGA')
                     .map(this.extractTweetData)
                     .catch(this.handleError);
   }
 
   getFollowersNASA(): Observable<User[]> {
-    return this.http.get('app/followersNASA')
+    return this.http.get(MYTWITTERSERVICE + 'app/followersNASA')
                     .map(this.extractUserData)
                     .catch(this.handleError);
   }
