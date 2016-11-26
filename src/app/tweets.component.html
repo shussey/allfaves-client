@@ -1,0 +1,25 @@
+<h3>Tweets</h3>
+<div class="table-responsive">
+  <table class="table">
+    <thead>
+        <tr>
+        <td>Picture</td>
+        <td>Name</td>
+        <td>Location</td>
+        <td>Time</td>
+        <td>Followers</td>
+        <td>Tweet</td>
+        </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let tweet of tweets">
+        <td><img src="{{tweet.user.profile_image_url}}" alt=""></td>
+        <td>{{tweet.user.name}}</td>
+        <td>{{tweet.user.location}}</td>
+        <td>{{tweet.created_at | twitterDateWithTime}}</td>
+        <td>{{tweet.user.followers_count}}</td>
+        <td>{{tweet.text}}</td>
+      </tr>
+    </tbody>
+  </table>
+</div>
