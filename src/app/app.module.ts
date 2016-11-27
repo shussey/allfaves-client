@@ -6,17 +6,21 @@ import { FormsModule }    from '@angular/forms';
 import { HttpModule, JsonpModule } from '@angular/http';
 
 // Declarations
+
+// Navigation component and routes
 import { AppComponent }       from './app.component';
+import { routing } from './app.routes';
 
+// Main pages
 import { NothingComponent } from './nothing.component';
+import { TweetsComponent } from './tweets.component';
 import { FollowersNASAComponent } from './followersNASA.component';
-import { TweetsNASAComponent } from './tweetsNASA.component';
-import { TweetsLADYGAGAComponent } from './tweetsLADYGAGA.component';
 
+// Services that call out to my server service
 import { TwitterService } from './twitter.service';
 import { TwitterDatePipe, TwitterDateWithTimePipe } from './twitter-dates.pipe';
 
-import { routing } from './app.routes';
+
 
 // Decorator
 @NgModule({
@@ -31,8 +35,7 @@ import { routing } from './app.routes';
     AppComponent,
     NothingComponent,
     FollowersNASAComponent,
-    TweetsNASAComponent,
-    TweetsLADYGAGAComponent,
+    TweetsComponent,
     TwitterDatePipe, 
     TwitterDateWithTimePipe 
     ],  

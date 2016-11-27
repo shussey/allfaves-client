@@ -10,19 +10,15 @@ var MYTWITTERSERVICE='https://allfaves-twitter-server.herokuapp.com/';
 
 @Injectable()
 export class TwitterService {
+
   constructor (private http: Http) {}
-
-  getTweetsNASA(): Observable<Tweet[]> {
-    return this.http.get(MYTWITTERSERVICE + 'app/tweetsNASA')
+  
+  getTweets(user): Observable<Tweet[]> {
+    return this.http.get(MYTWITTERSERVICE + 'app/tweets'+ user)
                     .map(this.extractTweetData)
                     .catch(this.handleError);
   }
-  getTweetsLADYGAGA(): Observable<Tweet[]> {
-    return this.http.get(MYTWITTERSERVICE + 'app/tweetsLADYGAGA')
-                    .map(this.extractTweetData)
-                    .catch(this.handleError);
-  }
-
+  
   getFollowersNASA(): Observable<User[]> {
     return this.http.get(MYTWITTERSERVICE + 'app/followersNASA')
                     .map(this.extractUserData)

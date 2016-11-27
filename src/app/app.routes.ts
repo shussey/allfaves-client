@@ -1,9 +1,12 @@
 import { ModuleWithProviders }  from '@angular/core';
+
 import { Routes, RouterModule } from '@angular/router';
-import { FollowersNASAComponent } from './followersNASA.component';
-import { TweetsNASAComponent } from './tweetsNASA.component';
-import { TweetsLADYGAGAComponent } from './tweetsLADYGAGA.component';
+
 import { NothingComponent } from './nothing.component';
+import { TweetsComponent } from './tweets.component';
+import { FollowersNASAComponent } from './followersNASA.component';
+
+
 // Route Configuration
 export const routes: Routes = [
   {
@@ -11,9 +14,8 @@ export const routes: Routes = [
     pathMatch: 'full'
   },
   { path: 'nothing', component: NothingComponent },
+  { path: 'tweets/:user', component: TweetsComponent },
   { path: 'followersNASA', component: FollowersNASAComponent },
-  { path: 'tweetsNASA', component: TweetsNASAComponent },
-  { path: 'tweetsLADYGAGA', component: TweetsLADYGAGAComponent },
 ];
 
 // - Updated Export
