@@ -12799,7 +12799,7 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 
 
 
-var MYTWITTERSERVICE = 'http://twit-ang2-type-node.herokuapp.com/';
+var MYTWITTERSERVICE = 'https://allfaves-twitter-server.herokuapp.com/';
 var TwitterService = (function () {
     function TwitterService(http) {
         this.http = http;

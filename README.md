@@ -1,5 +1,13 @@
 # AllfavesClient
 
+Client to my twitter service. 
+
+When run locally use ng serve. When hosted in Heroku it uses ng build and then http-server pointing at the dist folder.
+
+Currently the URL to the server service is in twitter.service.ts
+
+
+------------------
 This project was generated with [angular-cli](https://github.com/angular/angular-cli) version 1.0.0-beta.19-3.
 
 ## Development server
