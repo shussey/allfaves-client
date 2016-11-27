@@ -14,7 +14,7 @@ import { routing } from './app.routes';
 // Main pages
 import { NothingComponent } from './nothing.component';
 import { TweetsComponent } from './tweets.component';
-import { FollowersNASAComponent } from './followersNASA.component';
+import { FollowersComponent } from './followers.component';
 
 // Services that call out to my server service
 import { TwitterService } from './twitter.service';
@@ -34,7 +34,7 @@ import { TwitterDatePipe, TwitterDateWithTimePipe } from './twitter-dates.pipe';
   declarations: [ 
     AppComponent,
     NothingComponent,
-    FollowersNASAComponent,
+    FollowersComponent,
     TweetsComponent,
     TwitterDatePipe, 
     TwitterDateWithTimePipe 

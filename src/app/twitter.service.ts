@@ -7,6 +7,7 @@ import { Tweet } from './tweet';
 import { User } from './user';
 
 var MYTWITTERSERVICE='https://allfaves-twitter-server.herokuapp.com/';
+// var MYTWITTERSERVICE='http://localhost:3000/';
 
 @Injectable()
 export class TwitterService {
@@ -14,13 +15,13 @@ export class TwitterService {
   constructor (private http: Http) {}
   
   getTweets(user): Observable<Tweet[]> {
-    return this.http.get(MYTWITTERSERVICE + 'app/tweets'+ user)
+    return this.http.get(MYTWITTERSERVICE + 'app/tweets/'+ user)
                     .map(this.extractTweetData)
                     .catch(this.handleError);
   }
   
-  getFollowersNASA(): Observable<User[]> {
-    return this.http.get(MYTWITTERSERVICE + 'app/followersNASA')
+  getFollowers(user): Observable<User[]> {
+    return this.http.get(MYTWITTERSERVICE + 'app/followers/'+ user)
                     .map(this.extractUserData)
                     .catch(this.handleError);
   }

@@ -4,21 +4,21 @@ import { Component, OnInit } from '@angular/core';
 import { Router, ActivatedRoute, Params } from '@angular/router';
 import 'rxjs/add/operator/switchMap';
 
-// Tweet structure
-import { Tweet } from './tweet';
+// User structure
+import { User } from './user';
 // Twitter retrieval services
 import { TwitterService } from './twitter.service';
-import { TwitterDateWithTimePipe } from './twitter-dates.pipe';
+import { TwitterDatePipe } from './twitter-dates.pipe';
 
 @Component({
-  selector: 'tweets',
-  templateUrl: 'tweets.component.html',
-  styleUrls: ['tweets.component.css']
+  selector: 'followers',
+  templateUrl: 'followers.component.html',
+  styleUrls: [ 'followers.component.css' ]
 })
 
-export class TweetsComponent implements OnInit {
+export class FollowersComponent implements OnInit {
   errorMessage: string;
-  tweets: Tweet[];
+  users: User[];
   mode = 'Observable';
 
   constructor(  private route: ActivatedRoute,
@@ -28,12 +28,12 @@ export class TweetsComponent implements OnInit {
 
   ngOnInit() {
     // get the twitter user from the route parameter 'user'
-    // let user = +this.route.snapshot.params['user'];
+    //  let user = +this.route.snapshot.params['user'];
 
     this.route.params
-      .switchMap((params: Params) => this._TwitterService.getTweets(params['user']))
+      .switchMap((params: Params) => this._TwitterService.getFollowers(params['user']))
       .subscribe(
-         tweets => this.tweets = tweets,
-         error =>  this.errorMessage = <any>error);
-  }
+        users => this.users = users,
+        error =>  this.errorMessage = <any>error);
+    }
 }

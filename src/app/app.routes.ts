@@ -4,7 +4,7 @@ import { Routes, RouterModule } from '@angular/router';
 
 import { NothingComponent } from './nothing.component';
 import { TweetsComponent } from './tweets.component';
-import { FollowersNASAComponent } from './followersNASA.component';
+import { FollowersComponent } from './followers.component';
 
 
 // Route Configuration
@@ -15,7 +15,7 @@ export const routes: Routes = [
   },
   { path: 'nothing', component: NothingComponent },
   { path: 'tweets/:user', component: TweetsComponent },
-  { path: 'followersNASA', component: FollowersNASAComponent },
+  { path: 'followers/:user', component: FollowersComponent },
 ];
 
 // - Updated Export
