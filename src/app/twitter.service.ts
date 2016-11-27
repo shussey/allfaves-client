@@ -6,7 +6,7 @@ import './rxjs-operators';
 import { Tweet } from './tweet';
 import { User } from './user';
 
-var MYTWITTERSERVICE='https://twit-ang2-type-node.herokuapp.com/';
+var MYTWITTERSERVICE='https://allfaves-twitter-server.herokuapp.com/';
 
 @Injectable()
 export class TwitterService {
