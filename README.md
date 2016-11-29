@@ -1,40 +1,40 @@
 # AllfavesClient
 
 This is my client playground. Try it out on Heroku here. https://allfaves-client.herokuapp.com
+Since Heroku sleeps server if they have no activity for 30 minute, be patient when selecting different pages since the servers also have to wake up.
 
 It doesnt do a lot but I learned a huge amount building it.
 
 ## Development and dependencies
-I edit using Visual Studio Code on a Mac
+Here is what I am using:
 
-Obviously I use github for source management.
-
-I host in Heroku which took a little tweaking of the package.json to get working. I use the "Automatic Deploys" option so that every time I update the Github projects, it deploys.
-
-It is written in angular2 and typecript.
-
-It uses styles from getbootstrap.com to make it all look pretty
-
-Currently it is a client to two services I wrote
+* I edit using Visual Studio Code on a Mac
+* Obviously I use github for source management.
+* I host in Heroku which took a little tweaking of the package.json to get working. I use the "Automatic Deploys" option so that every time I update the Github projects, it deploys.
+* It is written in angular2 and typecript.
+* It uses styles from getbootstrap.com to make it all look pretty
+* Currently it is a client to two services I wrote
 
 ### Cloudant
 This part of the app is new so I have only got to listing existing records. More to follow considering how easy this was.
 
-I am persisting the data using the free cloudant tier in Bluemix. 
-I have a separate project to host the cloudant REST service built using loopback.io ( https://github.com/shussey/allfaves-cloudant )
-I generated the client API in this project from that service using with a client API generated using mean expert loopback-sdk-builder ( https://github.com/mean-expert-official/loopback-sdk-builder )
+* I am persisting the data using the free cloudant tier in Bluemix. 
+* I have a separate project to host the cloudant REST service built using loopback.io ( https://github.com/shussey/allfaves-cloudant )
+* I generated the client API in this project from that service using with a client API generated using mean expert loopback-sdk-builder ( https://github.com/mean-expert-official/loopback-sdk-builder )
 
 ### Twitter
 I build a custom twitter service with parameterized URLs for retrieving tweets and followers for any user. ( https://github.com/shussey/allfaves-twitter-server )
+
 This project has parameterized client routing but I only added menu selections for three specific people. 
+
 It could easily be changed to allow the user to be entered to get tweets for any valid user.
 
 
 ## Running it
-When run locally use ng serve. When hosted in Heroku it uses ng build and then http-server pointing at the dist folder.
+When run locally use `ng serve`
 
-Currently the URL to the server service is in twitter.service.ts
-
+When hosted in Heroku it uses `ng build` and then `http-server` pointing at the `dist` folder.
+NOTE: If you add new dependencies to this project, you have to edit package.json and move them from devDependencies to dependencies so that Heroku builds correctly.
 
 -------------------------------------------------
 This project was generated with [angular-cli](https://github.com/angular/angular-cli) version 1.0.0-beta.19-3.
