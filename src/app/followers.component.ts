@@ -11,7 +11,7 @@ import { TwitterService } from './twitter.service';
 import { TwitterDatePipe } from './twitter-dates.pipe';
 
 @Component({
-  selector: 'followers',
+  // selector: 'followers',
   templateUrl: 'followers.component.html',
   styleUrls: [ 'followers.component.css' ]
 })

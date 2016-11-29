@@ -3,6 +3,7 @@ import { ModuleWithProviders }  from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 
 import { NothingComponent } from './nothing.component';
+import { CloudpeopleComponent } from './cloudpeople.component';
 import { TweetsComponent } from './tweets.component';
 import { FollowersComponent } from './followers.component';
 
@@ -14,6 +15,7 @@ export const routes: Routes = [
     pathMatch: 'full'
   },
   { path: 'nothing', component: NothingComponent },
+  { path: 'cloudpeople', component: CloudpeopleComponent },
   { path: 'tweets/:user', component: TweetsComponent },
   { path: 'followers/:user', component: FollowersComponent },
 ];

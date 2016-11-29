@@ -13,6 +13,7 @@ import { routing } from './app.routes';
 
 // Main pages
 import { NothingComponent } from './nothing.component';
+import { CloudpeopleComponent } from './cloudpeople.component';
 import { TweetsComponent } from './tweets.component';
 import { FollowersComponent } from './followers.component';
 
@@ -20,6 +21,8 @@ import { FollowersComponent } from './followers.component';
 import { TwitterService } from './twitter.service';
 import { TwitterDatePipe, TwitterDateWithTimePipe } from './twitter-dates.pipe';
 
+// Feature Modules
+import { SDKModule } from './shared/sdk/index';
 
 
 // Decorator
@@ -29,11 +32,13 @@ import { TwitterDatePipe, TwitterDateWithTimePipe } from './twitter-dates.pipe';
      FormsModule,
      HttpModule,
      JsonpModule,
-     routing
+     routing,
+     SDKModule.forRoot()
     ],
   declarations: [ 
     AppComponent,
     NothingComponent,
+    CloudpeopleComponent,
     FollowersComponent,
     TweetsComponent,
     TwitterDatePipe, 

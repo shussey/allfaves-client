@@ -1,0 +1,21 @@
+<h3>Cloudant stored people records</h3>
+<div class="table-responsive">
+  <table class="table">
+    <thead>
+        <tr>
+        <td>First Name</td>
+        <td>Last Name</td>
+        <td>Age</td>
+        <td>Sex</td>
+        </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let person of people">
+        <td>{{person.firstname}}</td>
+        <td>{{person.lastname}}</td>
+        <td>{{person.ageyears}}</td>
+        <td>{{person.sexmf}}</td>
+      </tr>
+    </tbody>
+  </table>
+</div>

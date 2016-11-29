@@ -11,7 +11,7 @@ import { TwitterService } from './twitter.service';
 import { TwitterDateWithTimePipe } from './twitter-dates.pipe';
 
 @Component({
-  selector: 'tweets',
+  // selector: 'tweets',
   templateUrl: 'tweets.component.html',
   styleUrls: ['tweets.component.css']
 })

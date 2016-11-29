@@ -5,9 +5,16 @@ import { Component } from '@angular/core';
 
 @Component({
   template: `
-    <h2>Landing page</h2>
-    <p>This page is intentionally left blank</p>`
+      <h3>Landing page</h3>
+      <p>Intentionally blank</p>
+      `
 })
 
 // Component class
-export class NothingComponent { }
+export class NothingComponent { 
+
+constructor(){}
+
+ngOnInit() {}
+
+}
