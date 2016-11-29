@@ -43,9 +43,10 @@
     "tslint": "3.13.0",
     "typescript": "~2.0.3",
     "webdriver-manager": "10.2.5",
-    "zone.js": "^0.6.23"
+    "zone.js": "^0.6.23",
+    "@types/socket.io-client": "^1.4.29"
   },
   "devDependencies": {
-    "@types/socket.io-client": "^1.4.29"
+
   }
 }
